@@ -1,15 +1,45 @@
-<!DOCTYPE html>
+
+<!Doctype html>
 <html>
-	<body>
-	<head>
-<center>
-	BEM VINDO AO SITE
-		</center>
+<head>
+    <link rel="stylesheet" href="css/stylebg.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+if( localStorage.getItem("usuario") == "vinilobo" && localStorage.getItem("senha") =="123456" ){
+  $('#conteudo1').text('Bem vindo(a) a area reservada!')
+  $('#conteudo2').text('Acesso PERMITIDO!')
+  $("#conteudo1").body("background-color","#000000");
+}
+else {
+  $('#conteudo1').text('Acesso NEGADO')
+  $("#conteudo1").body("background","#cc66cc");
+}
+
+});
+$(document).ready(function(){
+if( localStorage.getItem("usuario") == "vinilobo" && localStorage.getItem("senha") =="123456" ){
+  $("body").css("background-color","green");
+}
+else {
+  $('#conteudo1').text('Acesso NEGADO')
+  $("body").css("background","red");
+}
+
+});
 
 
-  </script>
-
+</script>
 </head>
+<body style="font-size:34px; padding: 160px;">
+
+  <center>
+<h1><b><spam id="conteudo1"></spam></b></h1>
+</br>
+<h1><b><spam id="conteudo2"></spam></b></h1>
+</center>
+
 
 </body>
 </html>
